@@ -18,8 +18,9 @@ class Solution:
         time = 0
         while entry_q or exit_q:
             enter_person, exit_person = None, None
-            print (entry_q)
-            print (exit_q)
+            #print (entry_q)
+            #print (exit_q)
+            #print (prevState)
             if len(entry_q) and entry_q[0][0] <= time:
                 enter_person = entry_q[0]
             if len(exit_q) and exit_q[0][0] <= time:
@@ -39,15 +40,16 @@ class Solution:
                 choice = exit_q.popleft()
                 result[choice[1]] = time
             if choice:
-                prev_state = state[choice[1]]
+                print (choice)
+                prevState = state[choice[1]]
             else:
-                prev_state = -1
+                prevState = -1
             time += 1
         return result
 
 
-print (Solution().timeTakenToCrossDoor([0,1,1,2,4], [0,1,0,0,1]))
-#print (Solution().timeTakenToCrossDoor([[0,0,0]], [1,0,1]))
+#print (Solution().timeTakenToCrossDoor([0,1,1,2,4], [0,1,0,0,1]))
+print (Solution().timeTakenToCrossDoor([0,0,0], [1,0,1]))
 
 
 
