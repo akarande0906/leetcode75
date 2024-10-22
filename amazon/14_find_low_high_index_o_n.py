@@ -23,5 +23,5 @@ if __name__ == '__main__':
    print(find_low_high_index(arr,4))
    print(find_low_high_index(arr,5))
    print(find_low_high_index(arr,6))
-   arr = [1,2,2,2,46,8,8]
+   arr = [1,2,2,2,4,6,8,8]
    print(find_low_high_index(arr,2))

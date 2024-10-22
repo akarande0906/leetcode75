@@ -11,7 +11,7 @@ def find_low_index(arr, key):
 
         if mid_elem < key:
             low = mid + 1
-        else:
+        else: # mid elem is >= key
             high = mid - 1
 
         mid = low + int((high - low) / 2)

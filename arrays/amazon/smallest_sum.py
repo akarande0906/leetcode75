@@ -34,7 +34,8 @@ def minimalHeaviestSetA(arr):
     a_total = 0
     print (rptr - a_len)
     print (total)
-    for j in range(rptr, rptr - a_len, -1):
+    #for j in range(rptr, rptr - a_len, -1):
+    for j in range(rptr, -1, -1):
         a_total += arr[j]
         if a_total > total - a_total: # We have reached our condition
             break

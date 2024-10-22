@@ -14,7 +14,7 @@ class Solution:
             l, r = intervals[i]
             if l <= max_val:
                 max_val = max(max_val, r)
-                min_val = min(min_val, r)
+                min_val = min(min_val, l)
             else:
                 ret_arr.append([min_val, max_val])
                 min_val = l

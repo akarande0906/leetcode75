@@ -20,3 +20,4 @@ def are_anagrams(str1, str2):
 
 print(are_anagrams('abcdef', 'fedabc'))
 print(are_anagrams('abbdef', 'ffdabc'))
+print(are_anagrams('abbdef', 'fedbaa'))
