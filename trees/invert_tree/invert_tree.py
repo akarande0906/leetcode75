@@ -19,7 +19,7 @@ class Solution:
 def _create_tree(arr):
    if not arr:
       return None
-   root = TreeNodeb(arr[0])
+   root = TreeNode(arr[0])
    n = len(arr)
    q = [root]
    i = 1
