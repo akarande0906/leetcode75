@@ -2,8 +2,8 @@
 Connected Components in an Undirected Graph:
 
 1---0      3
-|	   |
-|	   |
+|	       |
+|	       |
 2          4
 Should print: {0,1,2} and {3,4}
 '''

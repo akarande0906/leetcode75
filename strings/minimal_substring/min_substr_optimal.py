@@ -10,6 +10,7 @@ class Solution:
         for c in t:
             seen[c] += 1
         while r < n:
+            print (seen)
             if seen[s[r]] > 0:
                 count += 1
             seen[s[r]] -= 1

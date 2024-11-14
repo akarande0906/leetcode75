@@ -4,33 +4,33 @@ in any order If you don't find a match, return an empty string """
 def min_substring(input_str, char_set):
     ''' Helloe there ole 
        ['e', 'l' 'o'] '''
-
-    if not input_str:
-       return ''
     lptr = 0
-    while input_str[lptr] not in char_set:
-       lptr += 1
-    cur_str = ''
-    min_str = ''
-    rptr = lptr
-    while lptr <= rptr and rptr < len(input_str):
-       cur_str = ''
-       chars = set(char_set)
-       for rptr in range(lptr, len(input_str)):
-          if input_str[rptr] in chars:
-              chars.remove(input_str[rptr])
-              if not chars or not len(chars):
-                  cur_str = input_str[lptr:rptr+1]
-                  print ('Cur STR: ' + cur_str)
-                  if not min_str or len(cur_str) < len(min_str): 
-                      min_str = cur_str
-                  lptr += 1
-                  rptr = lptr
-                  break
-    return min_str  
+    char_map, window = {}, {}
+    for ch in char_set:
+        window[ch] = window.get(ch, 0) + 1
+    have, need = 0, len(char_set)
+    min_substr = ''
+    min_left, min_right = 0, 0
+    min_len = len(input_str)
+    for rptr in range(len(input_str)):
+        cur_char = input_str[rptr]
+        char_map[cur_char] = char_map.get(cur_char, 0) + 1
+        if cur_char in window and char_map[cur_char] == window[cur_char]:
+            have += 1
+        while have == need:
+            if rptr - lptr + 1 < min_len:
+                min_len = rptr - lptr + 1
+                min_left, min_right = lptr, rptr
+            left_char = input_str[lptr]
+            char_map[left_char] = char_map.get(left_char, 0) - 1
+            if left_char in window and char_map[left_char] < window[cur_char]:
+                have -= 1
+            lptr += 1
+    return input_str[min_left : min_right + 1]
        
 
-print(min_substring('Helloe thery' , ['e','l','o']))    
-print(min_substring('a' , ['a']))    
+print(min_substring('Helloe thery' , 'elo'))
+print(min_substring('a' , 'a'))    
+print(min_substring('ADOBECODEBANC', 'ABC'))
 
 

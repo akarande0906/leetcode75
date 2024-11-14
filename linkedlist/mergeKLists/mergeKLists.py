@@ -29,4 +29,9 @@ class Solution:
             currentNode = currentNode.next
         currentNode.next = node1 if node1 else node2
         return dummy.next
+
+'''
+T: O(Nlogk) where N is total number of nodes, k is number of lists
+S: O(N) since we create a merge list temporarily
+'''
         

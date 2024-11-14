@@ -5,7 +5,7 @@ class Solution:
       bin_rep = ''
       while num > 0:
          if len(bin_rep) > 32:
-            return "ERROR"
+            return bin_rep
          r = 2 * num
          if r >= 1:
             bin_rep += '1'
@@ -17,4 +17,5 @@ class Solution:
 
 
 sol = Solution()
-print(sol.convert_to_binary(0.5))
+print(sol.convert_to_binary(0.75))
+print(sol.convert_to_binary(0.77))

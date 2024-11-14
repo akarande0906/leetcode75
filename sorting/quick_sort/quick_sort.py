@@ -12,3 +12,7 @@ def quickSort(array):
         return (quickSort(smlr_lst) + equal_lst + quickSort(grtr_lst))
     else:
         return array
+
+if __name__ == '__main__':
+   data = [7, 8, 9, 101, 22, 4]
+   print(quickSort(data))

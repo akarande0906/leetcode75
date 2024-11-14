@@ -10,11 +10,12 @@ class Solution:
          while lptr <= rptr and product >= k:
             product = product / nums[lptr]
             lptr += 1
-         res += rptr - lptr + 1 # This is because we also need to add the array with single element
+         #res += rptr - lptr + 1 # This is because we also need to add the array with single element
          prod_arr = nums[lptr: rptr+1]
+         print (prod_arr)
          while prod_arr:
             res_arr.append(prod_arr.copy())
-            prod_arr.pop()
+            prod_arr.pop(0)
       return res_arr
 
 

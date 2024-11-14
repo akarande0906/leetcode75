@@ -7,5 +7,6 @@ class Solution:
         return reversed_num
 
 sol = Solution()
+print(bin(sol.reverseBits(21)))
 print(bin(sol.reverseBits(4294967293)))
 print(bin(sol.reverseBits(43261596)))

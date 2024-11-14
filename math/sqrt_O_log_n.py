@@ -15,4 +15,4 @@ class Solution:
         return right
 
 print(Solution().mySqrt(14))
-    
+print(Solution().mySqrt(256))    
