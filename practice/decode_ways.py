@@ -25,8 +25,9 @@ class Solution:
             if int(s[index: index + 2]) <=26: # If 2 chars represent an alphabet
                 answer += recursiveWithMemo(index + 2, s)
             memo[index] = answer
+            print (memo)
             return answer
-        return recursiveWithMemo(0, s)a
+        return recursiveWithMemo(0, s)
 
 
         ''' Tabulation 
@@ -62,5 +63,13 @@ class Solution:
             prev_one = current
         return prev_one
         '''
+
+print (Solution().numDecodings('11106'))
+print (Solution().numDecodings('11111')) 
+'''
+11111:
+AAAAA, AAAK, AAKA, AKAA, AKK, KAAA, KAK, KKA
+memo[0] = 
+'''
 
 
