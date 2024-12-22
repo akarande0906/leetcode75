@@ -24,6 +24,7 @@ def getMaxElems(arr, k):
         prod *= heapq.heappop(heap)
     return prod
 
+
 def findMaxProduct(arr):
     ret_arr = []
     if len(arr) >= 1:

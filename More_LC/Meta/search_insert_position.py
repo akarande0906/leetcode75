@@ -21,6 +21,7 @@ class Solution:
 
 search = Solution().searchInsert
 arr = [1,3,5,6]
+print (search(arr, 0))
 print (search(arr, 2))
 print (search(arr, 5))
 print (search(arr, 7))

@@ -83,28 +83,28 @@ Time Complexity: O(n)  as we convert to array  SC: O(n)
 
 
 ''' Alternate solution : In order traversal: TC : O(n)    SC: O(logn)
-def findSize(head):
-            ptr = head
-            c = 0
-            while ptr:
-                ptr = ptr.next
-                c += 1
-            return c
+    def findSize(head):
+        ptr = head
+        c = 0
+        while ptr:
+            ptr = ptr.next
+            c += 1
+        return c
 
-        def convert(left, right):
-            nonlocal head
-            if left > right:
-                return None
-            mid = (left + right) // 2
-            left = convert(left, mid - 1)
-            node = TreeNode(head.val)
-            node.left = left
-            head = head.next
-            node.right = convert(mid+1, right)
-            return node
-    
-        size = findSize(head)
-        return convert(0, size - 1)
+    def convert(left, right):
+        nonlocal head
+        if left > right:
+            return None
+        mid = (left + right) // 2
+        left = convert(left, mid - 1)
+        node = TreeNode(head.val)
+        node.left = left
+        head = head.next
+        node.right = convert(mid+1, right)
+        return node
+
+    size = findSize(head)
+    return convert(0, size - 1)
 '''
 
 

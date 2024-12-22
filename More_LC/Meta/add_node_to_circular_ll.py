@@ -50,3 +50,43 @@ class Solution:
                     break
                 prev, cur = cur, cur.next
         return head   
+    
+    # ---- Better Solution --- 
+    """
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, next=None):
+        self.val = val
+        self.next = next
+"""
+
+class Solution:
+    def insertNewNode(self, node, insertVal):
+        insertNode = Node(insertVal)
+        insertNode.next = node.next
+        node.next = insertNode
+
+    def insert(self, head: 'Optional[Node]', insertVal: int) -> 'Node':
+        if not head:
+            head = Node(insertVal)
+            head.next = head
+            return head
+        elif head == head.next:
+            node = Node(insertVal)
+            head.next = node
+            node.next = head
+            return head
+        else:
+            cur = head
+            while cur.next != head:
+                if cur.val <= insertVal and cur.next.val >= insertVal:
+                    break
+                elif cur.val > cur.next.val: 
+                    if (cur.next.val >= insertVal or cur.val <= insertVal):
+                        break
+                cur = cur.next
+        self.insertNewNode(cur, insertVal)
+        return head
+
+
+            

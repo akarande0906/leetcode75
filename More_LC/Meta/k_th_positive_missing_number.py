@@ -44,6 +44,6 @@ class Solution:
 
 
 findKthNum = Solution().findKthPositive
-print(findKthNum([2,3,4,7,11], 5))
+print(findKthNum([2,3,4,7,11], 8))
 print(findKthNum([1,2,3,4], 2))
 print(findKthNum([1,3,5,7], 3))

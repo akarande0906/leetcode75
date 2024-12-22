@@ -26,8 +26,10 @@ class Solution:
                 return
             if node.val >= low and node.val <= high:
                 sum += node.val
-            dst(node.left)
-            dst(node.right)
+            if low < node.val:
+                dst(node.left)
+            if high > node.val:
+                dst(node.right)
         dst(root)
         return sum
     
@@ -39,9 +41,11 @@ class Solution:
             node = q.popleft()
             if node.val >= low and node.val <= high:
                 sum += node.val
-            if node.left:
+            if node.left and low < node.val:
+                # Call left subtree only if it could be included in the total
                 q.append(node.left)
-            if node.right:
+            if node.right and high > node.val:
+                # Call right subtree only if it could be included in the total
                 q.append(node.right)
         return sum
     '''

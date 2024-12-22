@@ -2,8 +2,6 @@
 '''
 When a contiguous block of text is selected in a PDF viewer, the selection is highlighted with a blue rectangle. 
 In this PDF viewer, each word is highlighted independently. For example:
-Example
- 
 The heights are  [1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5] and abc. 
 The tallest letter is  3 high and there are 3 letters. 
 Therefore highlighted area is  9 mm^2

@@ -15,9 +15,19 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(s[i])
-        return ''.join(stack)        
+        return ''.join(stack)     
+
+    # More concise 
+    def removeDuplicates2(self, s: str)   -> str:
+        stack = []
+        for c in s:
+            if stack and stack[-1] == c:
+                stack.pop()
+            else:
+                stack.append(c)
+        return ''.join(stack) 
         
-remover = Solution().removeDuplicates
+remover = Solution().removeDuplicates2
 print (remover('azxxzy'))
 print (remover('abbaca'))
 print (remover('abccba'))

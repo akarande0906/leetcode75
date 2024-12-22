@@ -28,7 +28,7 @@ class Solution:
         return False
             
 checkSum = Solution().checkSubarraySum
-print (checkSum([23,2,4,6,7], 6))
+print (checkSum([2,4], 6))
 print (checkSum([23,2,6,4,7], 6))
 print (checkSum([23,2,6,4,7], 13))
 

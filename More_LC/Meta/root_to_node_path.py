@@ -55,3 +55,4 @@ class Solution:
 sol = Solution()
 print (sol.sumNumbers(sol._create_tree([4,9,0,5,1])))
 print (sol.sumNumbers(sol._create_tree([1,2,3])))
+print (sol.sumNumbers(sol._create_tree([1,2,3,4,5,6,7])))

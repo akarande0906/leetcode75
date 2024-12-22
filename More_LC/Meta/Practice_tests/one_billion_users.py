@@ -14,7 +14,7 @@ import math
 def findPowerSum(growthRates, time):
   sum = 0
   for rate in growthRates:
-    sum ++ rate ** time
+    sum += rate ** time
   return sum
 
 

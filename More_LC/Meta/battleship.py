@@ -8,7 +8,7 @@ At least one horizontal or vertical cell separates between two battleships (i.e.
 from collections import deque
 class Solution:
     def countBattleships(self, board: list[list[str]]) -> int:
-        bs_cells = set()
+        bs_cells = []
         visited = set()
         self.ships = 0
         rows = len(board)
@@ -16,7 +16,7 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 if board[r][c] == 'X':
-                    bs_cells.add((r,c))
+                    bs_cells.append((r,c))
         if not bs_cells:
             return 0 
 
@@ -33,15 +33,17 @@ class Solution:
                 else:
                     neighbors = [(r, c-1), (r, c+1)]
                 for r1,c1 in neighbors:
-                    if r1 >= 0 and c1 >= 0 and r1 < rows and c1 < cols and board[r1][c1] == 'X':
+                    if r1 >= 0 and c1 >= 0 and not (r1,c1) in visited and r1 < rows and c1 < cols and board[r1][c1] == 'X':
                         found = True
-                        bs_cells.remove((r1,c1))
-                        board[r1][c1] = '.'
+                        #bs_cells.remove((r1,c1))
+                        #board[r1][c1] = '.'
                         queue.append((r1,c1, is_vertical))
+                    if (r1,c1) in bs_cells:
+                        bs_cells.remove((r1,c1))
             return found
 
         while bs_cells:
-            row, col = bs_cells.pop()
+            row, col = bs_cells.pop(0)
             if not find_battleship(row, col, True):
                 find_battleship(row, col, False)
             self.ships += 1
@@ -52,3 +54,4 @@ num_ships = Solution().countBattleships
 print (num_ships([["X",".",".","X"],[".",".",".","X"],[".",".",".","X"]]))
 print (num_ships([["X","X","X","X"],[".",".",".","X"],[".",".",".","X"]]))
 print (num_ships([['.']]))
+print (num_ships([['X','X','X'],['.','X','.'],['X','.','X']]))

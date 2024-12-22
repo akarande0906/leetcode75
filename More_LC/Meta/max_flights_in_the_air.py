@@ -21,7 +21,7 @@ def maxFlightsInTheAir(arr):
     '''
     q = deque()
     q.append(arr[0])
-    max_flights = 0
+    max_flights = 1
     for i in range(1, len(arr)):
         while q and q[0][1] < arr[i][0]:
             q.popleft()
@@ -32,10 +32,13 @@ def maxFlightsInTheAir(arr):
     
     return max_flights
 
-#arr = [[4,8], [2,5], [17, 20], [10, 21], [9,18]]
-#print(maxFlightsInTheAir(arr))
+arr = [[4,8], [2,5], [17, 20], [10, 21], [9,18]]
+print(maxFlightsInTheAir(arr))
 
 arr = [[4,11], [2,5], [9, 20], [10, 21], [9,18]]
+print(maxFlightsInTheAir(arr))
+
+arr = [[4,11]]
 print(maxFlightsInTheAir(arr))
 
         

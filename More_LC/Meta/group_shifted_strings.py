@@ -28,3 +28,23 @@ def groupShiftedStrings(string_array):
 
 print(groupShiftedStrings(['abd', 'bce', 'ac', 'ya', 'h', 'p']))
 
+
+'''----- Alternative ---
+class Solution:
+    def groupStrings(self, strings: List[str]) -> List[List[str]]:
+        string_map = defaultdict(list)
+        for string in strings:
+            if len(string) == 1:
+                string_map[(1)].append(string)
+            else:
+                diff_array = []
+                for i in range(1, len(string)):
+                    diff = (ord(string[i]) - ord(string[i-1])) % 26
+                    diff_array.append(diff)
+                string_map[tuple(diff_array)].append(string)
+        ret_arr = []
+        for value in string_map.values():
+            ret_arr.append(list(value))
+        return ret_arr
+
+'''

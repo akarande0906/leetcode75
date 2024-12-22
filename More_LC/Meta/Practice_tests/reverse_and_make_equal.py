@@ -15,12 +15,12 @@ def are_they_equal(array_a, array_b):
       lptr += 1
     if array_a[rptr] == array_b[rptr]:
       rptr -= 1
-    while lptr <= rptr:
-      if array_a[lptr] != array_b[rptr]:
-        return False
-      lptr += 1
-      rptr -= 1
-    return True
+  while lptr <= rptr:
+    if array_a[lptr] != array_b[rptr]:
+      return False
+    lptr += 1
+    rptr -= 1
+  return True
 
 print(are_they_equal([1, 2, 3, 4], [1, 4, 3, 2]))
 print(are_they_equal([1, 2, 3, 4],[1, 2, 3, 5]))
