@@ -23,7 +23,7 @@ class Solution:
             if stop > k:
                 continue
             for adjnode, flight_cost in adj_list[node]:
-                if dist[adjnode] > cost + flight_cost and stop <= k:
+                if c[adjnode] > cost + flight_cost and stop <= k:
                     dist[adjnode] = cost + flight_cost  # Update to the cheapest value
                     queue.append([stop+1, adjnode, cost+flight_cost]) # Add a stop and update the cost
         if dist[dst] == float('inf'):

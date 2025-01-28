@@ -29,3 +29,4 @@ class Solution:
     TC: O(N * 2^N)) -> We run this n times and generate 2^N possible choices
     SC: O(N) because we append max of n elements in the curr array
     '''
+print(Solution().subsets([1,2,3])) # [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]

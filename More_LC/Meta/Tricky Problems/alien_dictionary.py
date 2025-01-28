@@ -49,6 +49,11 @@ class Solution:
 
 alien = Solution().alienOrder
 print(alien(["wrt","wrf","er","ett","rftt"]))
+print(alien(["wrt","wrf","er","ett","rftt", "xyz", "xym"]))
 print(alien(["z","x"]))
 print(alien(["z","x", "z"]))
+
+# TC: O(C) where C is the total number of characters in the input list
+# SC: O(C) where C is the total number of characters in the input list
+
 

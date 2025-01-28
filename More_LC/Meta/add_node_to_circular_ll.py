@@ -82,7 +82,9 @@ class Solution:
                 if cur.val <= insertVal and cur.next.val >= insertVal:
                     break
                 elif cur.val > cur.next.val: 
-                    if (cur.next.val >= insertVal or cur.val <= insertVal):
+                    if (cur.next.val >= insertVal or cur.val <= insertVal): 
+                        # At this point we have reached the end of the loop and 
+                        # we are iterating between the max and min element of the list
                         break
                 cur = cur.next
         self.insertNewNode(cur, insertVal)

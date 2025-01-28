@@ -3,7 +3,7 @@ LC 18: 4Sum
 Given an array nums of n integers, return an array of all the unique quadruplets
 '''
 class Solution:
-    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+    def fourSum(self, nums: list[int], target: int) -> list[list[int]]:
         if len(nums) < 4:
             return []
         # First Sort the array

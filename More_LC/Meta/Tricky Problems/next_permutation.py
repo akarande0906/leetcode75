@@ -17,7 +17,7 @@ class Solution:
         # That is the pivot. Swap this element with the next largest element in the list
         # Then reverse the array to the right of the pivot.
         pivot = -1
-        # First find a pivot that is the element that is not decrasing.
+        # First find a pivot that is the element that is not decreasing.
         # This will give us the point where we have to swap since all elements after it have reached their max in that subarray
         for index in range(len(nums)-1, 0, -1):
             if nums[index] > nums[index - 1]:
