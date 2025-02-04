@@ -1,4 +1,5 @@
-''' LC 213 '''
+''' LC 213: House Robber II: House robber with houses in a circle
+'''
 
 class Solution:
     '''
@@ -7,7 +8,7 @@ class Solution:
     Second one excluding the first house
     and find the max
     ''' 
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: list[int]) -> int:
         if len(nums) == 1:
             return nums[0]
         temp_nums = nums.copy()
