@@ -24,7 +24,9 @@ class Solution:
         #    backtrack(i, candidates[i], [candidates[i]])
         backtrack(0, 0, [])
         return output_array
-# Time Complexity: O(2^n) where n is the number of elements in the candidates array
+# Time Complexity: O(N^(T/M + 1)) where N is  is the number of elements in the candidates array
+# T is the target value, and M is the minimum value among the candidates
+# The worst case time complexity is O(2^(T/M)) where we have to make a decision at each step to include or exclude the element
 # Space Complexity: O(n) to maintain the output array
 
 combinationSum = Solution().combinationSum
