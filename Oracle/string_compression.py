@@ -13,7 +13,7 @@ class Solution:
             nonlocal cur_id
             chars[cur_id] = cur_char
             cur_id += 1
-            temp_arr = []
+            # temp_arr = []
             if group_count != 1:
                 str_repr = str(group_count)
                 chars[cur_id:cur_id+len(str_repr)] = list(str_repr)

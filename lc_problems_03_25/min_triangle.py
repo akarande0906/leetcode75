@@ -34,7 +34,7 @@ class Solution:
     # Space Complexity: O(n) to maintain the 1d arrays
 
 
-minimumTotal = Solution().minimumTotal
+minimumTotal = Solution().minimumTotal_optimal_space
 print(minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]]))
 print(minimumTotal([[-10]]))
 print(minimumTotal([[-1],[2,3],[1,-1,-3]]))

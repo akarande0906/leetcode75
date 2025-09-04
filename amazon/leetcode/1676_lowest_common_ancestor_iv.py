@@ -10,23 +10,26 @@ class Solution:
     def lca(self, root: TreeNode, nodes: list[TreeNode]) -> TreeNode:
         node_set = set(nodes)
         def helper(root):
-            if root is None:
-                return None
-            if root.val in node_set:
+            # If we encounter a node thats in the set 
+            # or reach an empty node return 
+            if root is None or root.val in node_set:
                 return root
-
             left = helper(root.left)
             right = helper(root.right)
 
-            if left:
+            """ if left:
                 print ('Left: ' + str(left.val))
             if right:
                 print ('Right: ' + str(right.val))
-
-
+            """
+            # If we find matching nodes from both left and right sides
+            # it means that the 
             if left and right:
                 return root
+            
+            # At this point we either have left or right node
             return left if left else right
+        
         return helper(root)
 
 def createTree(arr):
@@ -59,3 +62,4 @@ print(Solution().lca(createTree(arr), [22,16]).val)
 arr = [3,5,1,6,2,0,8,None,None,7,4]
 print(Solution().lca(createTree(arr), [1]).val)
 print(Solution().lca(createTree(arr), [7,6,2,4]).val)
+print(Solution().lca(createTree([3,5,1,6,2,0,8,None,None,7,4]), [7,4,2,8]).val)

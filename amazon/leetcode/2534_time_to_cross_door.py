@@ -18,9 +18,7 @@ class Solution:
         time = 0
         while entry_q or exit_q:
             enter_person, exit_person = None, None
-            #print (entry_q)
-            #print (exit_q)
-            #print (prevState)
+
             if len(entry_q) and entry_q[0][0] <= time:
                 enter_person = entry_q[0]
             if len(exit_q) and exit_q[0][0] <= time:
@@ -48,7 +46,7 @@ class Solution:
         return result
 
 
-#print (Solution().timeTakenToCrossDoor([0,1,1,2,4], [0,1,0,0,1]))
+print (Solution().timeTakenToCrossDoor([0,1,1,2,4], [0,1,0,0,1]))
 print (Solution().timeTakenToCrossDoor([0,0,0], [1,0,1]))
 
 

@@ -1,4 +1,5 @@
-''' LC: 670 '''
+''' LC: 670: Maximum Swap
+'''
 class Solution:
     def maximumSwap(self, num: int) -> int:
         nums = list(str(num))

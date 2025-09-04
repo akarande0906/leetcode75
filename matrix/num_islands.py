@@ -1,4 +1,5 @@
-from collections import deque 
+from collections import deque
+from typing import Deque, Tuple 
 ''' LC: 200 '''
 class Solution:
     def numIslands(self, grid: list[list[str]]) -> int:

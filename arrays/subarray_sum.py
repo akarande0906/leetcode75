@@ -10,7 +10,7 @@ class Solution:
             if sum == target:
                 return [1, val + 1]
             prefarr[sum] = val + 1
-        print (prefarr)
+        #print (prefarr)
         for key, val in prefarr.items():
             if  key < target or key == 0: 
                 continue

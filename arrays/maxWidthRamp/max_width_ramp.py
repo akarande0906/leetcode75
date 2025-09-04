@@ -1,6 +1,7 @@
 '''Leetcode 962 '''
 class Solution:
    def maxWidthRamp(self, nums: list[int]) -> int:
+      print (nums)
       # First find the max value at the right and add it to an array
       max_val = 0
       max_array = [0] * len(nums) 

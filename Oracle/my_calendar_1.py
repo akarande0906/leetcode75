@@ -31,5 +31,8 @@ class MyCalendar:
 
 
 # Your MyCalendar object will be instantiated and called as such:
-# obj = MyCalendar()
-# param_1 = obj.book(startTime,endTime)
+obj = MyCalendar()
+print(obj.book(10, 20))  # True
+print(obj.book(15, 25))  # False
+print(obj.book(20, 30))  # True
+print(obj.book(5, 15))   # False    

@@ -1,4 +1,6 @@
 '''
+LC 42: Trapping Rain Water
+Given an array of non-negative integers representing the height of bars, calculate how much water can be trapped after raining.
 [ 3, 0, 1, 0, 4, 0, 2]
 [4, 2, 0, 3, 2, 5]
 '''
@@ -22,3 +24,8 @@ class Solution:
 
 print(Solution().collectedWater([ 3, 0, 1, 0, 4, 0, 2]))
 print(Solution().collectedWater([4, 2, 0, 3, 2, 5]))
+print(Solution().collectedWater([3, 0, 2, 0, 1]))
+
+# TC: O(n)
+# SC: O(1) since we are not using any extra space other than a few variables.
+

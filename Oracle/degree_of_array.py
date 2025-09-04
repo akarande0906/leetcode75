@@ -12,7 +12,7 @@ class Solution:
         
         # Now find the degree of n
         degree = max(count.values())
-        ans = len(nums)
+        ans = len(nums) # Default
         for c in count:
             if count[c] == degree:
                 ans = min(ans, right[c] - left[c] + 1)
