@@ -20,10 +20,10 @@ class Solution:
 # Space: O(n) # For the counter
 
 checkInclusion = Solution().checkInclusion
+assert checkInclusion("hello", "ooolleoooleh") == False
 assert checkInclusion("ab", "eidbaooo") == True
 assert checkInclusion("ab", "eidboaoo") == False
 assert checkInclusion("adc", "dcda") == True
-assert checkInclusion("hello", "ooolleoooleh") == False
 assert checkInclusion("hello", "ooolleoolleh") == True
 
                 

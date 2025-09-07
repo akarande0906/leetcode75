@@ -1,4 +1,4 @@
-package Oracle.Java;
+package companies.oracle.java;
 
 class Solution2 {
     public int numIslands(char[][] grid) {

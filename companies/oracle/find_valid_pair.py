@@ -15,12 +15,12 @@ class Solution:
 # Time: O(n)
 # Space: O(n) for the Counter/dict
 findValidPair = Solution().findValidPair
+print (findValidPair("122333"))
 print (findValidPair("1122"))
 print (findValidPair("1234"))
 print (findValidPair("1221"))
 print (findValidPair("2523533"))
 print (findValidPair("221"))
-print (findValidPair("1122333"))
 
 
     

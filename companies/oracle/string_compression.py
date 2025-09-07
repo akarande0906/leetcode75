@@ -35,11 +35,11 @@ class Solution:
 # Time: O(n)
 # Space: O(1)
 compress = Solution().compress
-print (compress(["a","a","b","b","c","c","c"]))
-print (compress(["a"]))
-print (compress(["a","b","b","b","b","b","b","b","b","b","b","b","b"]))
-print (compress(["a","a","a","b","b","a","a"]))
-print (compress(["a","a","a","b","b","c","c","c"]))
+compress(["a","a","b","b","c","c","c"])
+compress(["a"])
+compress(["a","b","b","b","b","b","b","b","b","b","b","b","b"])
+compress(["a","a","a","b","b","a","a"])
+compress(["a","a","a","b","b","c","c","c"])
 
 
 

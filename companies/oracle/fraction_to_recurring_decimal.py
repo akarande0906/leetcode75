@@ -32,6 +32,7 @@ class Solution:
 # Space: O(n)
 
 fractionToDecimal = Solution().fractionToDecimal
+print (fractionToDecimal(1, 7))
 print (fractionToDecimal(1, 2))
 print (fractionToDecimal(2, 1))
 print (fractionToDecimal(2, 3))

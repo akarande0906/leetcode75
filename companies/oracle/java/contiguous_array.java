@@ -1,4 +1,4 @@
-package Oracle.Java;
+package companies.oracle.java;
 
 // Leet Code 525: Contiguous Array
 
