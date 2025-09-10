@@ -3,10 +3,10 @@ Given the root node of a directed graph, clone this graph by creating its deep c
 '''
 
 # Definition for a graph node
-# class Node:
-#   def __init__(self, d):
-#     self.data = d
-#     self.neighbors = []
+class Node:
+  def __init__(self, d):
+    self.data = d
+    self.neighbors = []
 from collections import deque
 
 def clone(root):

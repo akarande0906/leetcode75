@@ -1,6 +1,11 @@
 '''
 You are given a linked list where the node has two pointers. The first is the regular next pointer. The second pointer is called arbitrary and it can point to any node in the linked list. Your job is to write code to make a deep copy of the given linked list.
 '''
+class LinkedListNode:
+    def __init__(self, val=None, next=None):
+        self.data = val
+        self.next = next
+
 def deep_copy_arbitrary_pointer(head):
     if head is None:
         return None
