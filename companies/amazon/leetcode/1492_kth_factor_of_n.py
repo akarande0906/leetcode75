@@ -24,7 +24,7 @@ class Solution:
                     return i
         
         if int(n**0.5) ** 2 == n:
-            max_iter = int(n**0.5) - 1 # Perfect square case and therefore we can skip the square root as its already counter
+            max_iter = int(n**0.5) - 1 # Perfect square case and therefore we can skip the square root as its already counted
         else:
             max_iter = int(n**0.5)
         

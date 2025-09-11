@@ -20,8 +20,8 @@ class Solution:
             if nums[i] != i + 1:
                 return i + 1
         return n + 1
-# Time: O(n)
-# Space: O(1)
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 first_missing = Solution().firstMissingPositive
 assert first_missing([1,2,0]) == 3
 assert first_missing([3,4,-1,1]) == 2
