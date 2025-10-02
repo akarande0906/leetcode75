@@ -1,5 +1,5 @@
 '''
-LC 740: Delete and Earn
+Leetcode 740: Delete and Earn
 '''
 from typing import List
 from collections import defaultdict

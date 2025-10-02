@@ -1,5 +1,5 @@
 '''
-Prob: 643
+Leetcode 643: Find Max Average Subarray
 '''
 class Solution:
     def findMaxAverage(self, nums: list[int], k: int) -> float:

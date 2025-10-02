@@ -8,7 +8,7 @@ We set the left and right pointers to the edges
 We check if the value at left pointer is less than the value at right pointer:
     That means that we can consider the difference between the highest wall on the left
     and the height at the left pointer, which will give us the current vol of water at that level
-    Then we incrase the left pointer to proceed to the next row
+    Then we increase the left pointer to proceed to the next row
     We update the max height on left to the current height if its greater.
 Else we check the volume of water on the right and follow the same process, except we move to the left
 '''
@@ -30,4 +30,6 @@ class Solution:
 
 trap = Solution().trap
 print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+print(trap([0,2,0,3,1,0,1,3,2,1]))
 print(trap([4,2,0,3,2,5]))
+print(trap([1,2,0,1,2,3]))
