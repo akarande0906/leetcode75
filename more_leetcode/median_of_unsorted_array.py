@@ -30,12 +30,19 @@ def quickselect(l, k, pivot_fn):
     pivots = [el for el in l if el == pivot]
 
     if k < len(lows):
+        # Our element is in the low list of elements and we can inturn focus our search here
         return quickselect(lows, k, pivot_fn)
     elif k < len(lows) + len(pivots):
-        # We got lucky and guessed the median
+        # We got lucky and guessed the median. So we can just return any of the pivot elements,
+        # which are equal
         return pivots[0]
     else:
+        # Our median is in the high list, so we focus our search here
+        # We need to subtract the number of elements in the low and mid lists
         return quickselect(highs, k - len(lows) - len(pivots), pivot_fn)
     
 print (quickselect_median( [12, 3, 5, 7, 4, 19, 26, 11 ] ))
 print (quickselect_median( [12, 3, 5, 7, 4, 19, 26 ] ))
+
+# Time complexity : Average O(n), Worst case: O(n^2)
+# Space complexity: O(n) as our three arrays high, low, pivot have a total length of n
